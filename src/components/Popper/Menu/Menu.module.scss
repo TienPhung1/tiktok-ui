@@ -1,0 +1,49 @@
+//menu wapper
+.menu-list {
+    width: 224px;
+
+    //menu items
+    .menu-item {
+        margin-left: 0;
+    }
+}
+.menu-proper {
+    padding-bottom: 8px;
+}
+//menu items
+.menu-item {
+    display: flex;
+    width: 100%;
+    padding: 11px 16px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.8rem;
+    border-radius: 0;
+
+    &.separate {
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
+    }
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+//Header menu
+.header {
+    position: relative;
+    height: 50px;
+    margin-top: -8px;
+}
+.back-btn {
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+.header-title {
+    position: absolute;
+    font-size: 1.8rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
