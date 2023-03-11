@@ -10,9 +10,11 @@ import {
     faKeyboard,
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
-
+import { Link } from 'react-router-dom';
 import 'tippy.js/dist/tippy.css';
 import Tippy from '@tippyjs/react';
+
+import routesConfig from '~/config/routes';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
@@ -39,7 +41,87 @@ const MENU_ITEMS = [
                 {
                     type: 'language',
                     code: 'vi',
-                    title: 'Tiếng việt',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'indo',
+                    title: 'Indonesia',
+                },
+                {
+                    type: 'language',
+                    code: 'thaid',
+                    title: 'Thái Lan',
+                },
+                {
+                    type: 'language',
+                    code: 'cam',
+                    title: 'Campodia',
+                },
+                {
+                    type: 'language',
+                    code: 'japan',
+                    title: 'Japan',
+                },
+                {
+                    type: 'language',
+                    code: 'han',
+                    title: 'Korea',
+                },
+                {
+                    type: 'language',
+                    code: 'anh',
+                    title: 'England',
+                },
+                {
+                    type: 'language',
+                    code: 'amer',
+                    title: 'America',
+                },
+                {
+                    type: 'language',
+                    code: 'fra',
+                    title: 'France',
+                },
+                {
+                    type: 'language',
+                    code: 'bra',
+                    title: 'brazil',
+                },
+                {
+                    type: 'language',
+                    code: 'ita',
+                    title: 'Itali',
+                },
+                {
+                    type: 'language',
+                    code: 'china',
+                    title: 'China',
+                },
+                {
+                    type: 'language',
+                    code: 'egypt',
+                    title: 'Egypt',
+                },
+                {
+                    type: 'language',
+                    code: 'port',
+                    title: 'Portugal',
+                },
+                {
+                    type: 'language',
+                    code: 'spain',
+                    title: 'Spain',
+                },
+                {
+                    type: 'language',
+                    code: 'bel',
+                    title: 'belgium',
+                },
+                {
+                    type: 'language',
+                    code: 'sing',
+                    title: 'Singapore',
                 },
             ],
         },
@@ -102,7 +184,9 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <img src={images.logo} alt="TikTok" />
+                    <Link to={routesConfig.home} className={cx('logoLink')}>
+                        <img src={images.logo} alt="TikTok" />
+                    </Link>
                 </div>
 
                 {/**Search... */}
